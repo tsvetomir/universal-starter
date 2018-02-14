@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import {TransferHttpCacheModule} from '@nguniversal/common';
 
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,6 +15,7 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'my-app'}),
+    ButtonsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full'},
       { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
