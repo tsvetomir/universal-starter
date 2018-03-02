@@ -1,15 +1,37 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  template: `<h3>{{ message }}</h3>`
+    template: `
+    <div class="example-wrapper" style="min-height: 400px;">
+      <div class="col-xs-12 col-sm-6 example-col">
+        <p>AutoComplete</p>
+        <kendo-autocomplete [data]="listItems" [placeholder]="'Your favorite sport'">
+        </kendo-autocomplete>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 example-col">
+        <p>ComboBox</p>
+        <kendo-combobox [data]="listItems" [value]="'Basketball'">
+        </kendo-combobox>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 example-col">
+        <p>DropDownList</p>
+        <kendo-dropdownlist [data]="listItems" [value]="'Basketball'">
+        </kendo-dropdownlist>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 example-col">
+        <p>MultiSelect</p>
+        <kendo-multiselect [data]="listItems" [value]="value" [placeholder]="'Your favorite sports'"></kendo-multiselect>
+      </div>
+    </div>
+    `
 })
-export class HomeComponent implements OnInit {
-  public message: string;
+export class HomeComponent {
+    listItems: Array<string> = ['Baseball', 'Basketball', 'Cricket', 'Field Hockey', 'Football', 'Table Tennis', 'Tennis', 'Volleyball'];
 
-  constructor() {}
-
-  ngOnInit() {
-    this.message = 'Hello';
-  }
+    value = ['Basketball', 'Cricket'];
 }
+
