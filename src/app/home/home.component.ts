@@ -27,6 +27,8 @@ import {Component} from '@angular/core';
         <kendo-multiselect [data]="listItems" [value]="value" [placeholder]="'Your favorite sports'"></kendo-multiselect>
       </div>
     </div>
+
+    <kendo-popup>Foo</kendo-popup>
     `
 })
 export class HomeComponent {

@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import {TransferHttpCacheModule} from '@nguniversal/common';
 
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { PopupModule } from '@progress/kendo-angular-popup';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
     ]),
     TransferHttpCacheModule,
     BrowserAnimationsModule,
-    DropDownsModule
+    DropDownsModule,
+    PopupModule
   ],
   providers: [],
   bootstrap: [AppComponent]
